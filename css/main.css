@@ -1,0 +1,274 @@
+/***
+FONTS 
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato|Old+Standard+TT:400,700");
+/*** 
+VAR
+*/
+/****************
+Documents
+*/
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Old Standard tt';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+}
+
+/*****
+SECTIONS
+*/
+main {
+  /*************
+Title mobile
+**/
+}
+
+main header {
+  background-image: url("/imgs/landing.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  height: 80vh;
+}
+
+main nav {
+  position: fixed;
+  z-index: 4;
+}
+
+main nav a {
+  text-decoration: none;
+  color: #022840;
+  -webkit-transition: color .3 ease;
+  transition: color .3 ease;
+}
+
+main nav a:hover {
+  color: #8C4227;
+}
+
+main nav .menuToggle {
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 40px;
+  z-index: 1;
+}
+
+main nav .menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  border: 2px solid red;
+}
+
+main nav .menuToggle span {
+  display: block;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  width: 33px;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+main nav .menuToggle .two {
+  width: 24px;
+}
+
+main nav .menuToggle .three {
+  width: 14px;
+}
+
+main nav .menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+main nav .menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+main nav .menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-4px, -1px);
+          transform: rotate(45deg) translate(-4px, -1px);
+  background: #292929;
+}
+
+main nav .menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+main nav .menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+  width: 33px;
+}
+
+main nav .menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+main nav .menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #84A9BF;
+  list-style-type: none;
+  /* to stop flickering of text in safari */
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+main nav .menu li {
+  padding: 10px 0;
+  font-family: 'lato';
+  font-size: 1.8rem;
+}
+
+main .logo {
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 40px;
+  z-index: 1;
+  color: white;
+  font-size: 12px;
+}
+
+main .logo h1 {
+  font-weight: 400;
+}
+
+main .title {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+}
+
+main .title h1 {
+  font-weight: 400;
+  color: #8C4227;
+  font-size: 4.5rem;
+  text-align: left;
+}
+
+main .title p {
+  position: relative;
+  bottom: 60px;
+  font-weight: 400;
+  text-align: left;
+}
+
+main .statement {
+  position: absolute;
+  top: 60%;
+  background-color: #CCB08D;
+  height: 60vh;
+  padding: 40px;
+  padding-top: 0;
+  text-align: left;
+}
+
+main .statement .date {
+  font-family: 'Lato';
+  color: #d9d9d9;
+  text-align: left;
+  padding: 0;
+}
+
+main .statement p {
+  font-size: 16px;
+  line-height: 160%;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+main .statement .button_container {
+  position: relative;
+}
+
+main .statement .button_container .button {
+  border: 1px solid #022840;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .statement .button_container .button a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #022840;
+  font-weight: 700;
+  text-align: center;
+}
+
+main .statement .button_container .lines .before, main .statement .button_container .lines .after {
+  background-color: #84A9BF;
+  height: 2px;
+  width: 50px;
+}
+
+main .statement .button_container .lines .before {
+  width: 15%;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  -webkit-transform: translateY(-50);
+          transform: translateY(-50);
+}
+
+main .statement .button_container .lines .after {
+  width: 15%;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  right: 0;
+  -webkit-transform: translateY(-50);
+          transform: translateY(-50);
+}
+/*# sourceMappingURL=main.css.map */
