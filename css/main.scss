@@ -3,18 +3,22 @@ FONTS
 */
 @import url('https://fonts.googleapis.com/css?family=Lato|Old+Standard+TT:400,700');
 
-/*** 
-VAR
+/****** 
+Other Stylesheets
 */
+@import './header';
+@import './variables';
 
-$colors:(
-"primary": #292929,
-"secondary": #CCB08D,
-"accent": #84A9BF,
-"accent_2": #022840,
-"accent_3": #8C4227
-);
 
+/***** 
+MIXINS 
+*/
+@mixin even_justify($height, $justify) {
+    display: flex;
+        justify-content: $justify;
+        align-items: center;
+       height: $height;
+}
 
 
 
@@ -27,7 +31,7 @@ html,body{
     padding: 0;
     font-family: 'Old Standard tt'; 
     box-sizing: border-box;
-   
+   background-color: map-get($colors, primary);
     height: 100%;
     width: 100%;
     font-size: 12px;
@@ -39,164 +43,7 @@ SECTIONS
 */
 
 main{
-    header{
-        background-image: url('../imgs/landing.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        z-index: 1;
-        height: 80vh;
-        
-    }
-  
-    nav{
-        position: fixed;
-        z-index: 4;
-    a{
-        text-decoration: none;
-        color: map-get($colors, "accent_2");
-        transition: color .3 ease;
-    }
-    
-    a:hover{
-        color: map-get($colors, "accent_3");
-    }
    
-    .menuToggle
-    {
-      display: block;
-      position: relative;
-      top: 30px;
-      left: 40px;
-      
-      z-index: 1;
-
-      
-
-      input{
-          display: block;
-          width: 40px;
-          height: 32px;
-          position: absolute;
-          top: -7px;
-          left: -5px;
-          cursor: pointer;
-          opacity: 0; /* hide this */
-          z-index: 2; /* and place it over the hamburger */
-          border: 2px solid red;
-      }
-
-      span{
-        display: block;
-        height: 3px;
-        margin-bottom: 5px;
-        position: relative;
-        background: #ffffff;
-        z-index: 1;
-        transform-origin: 4px 0px;
-        width: 33px;
-       
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    all 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    opacity 0.55s ease; 
-                    
-      }
-
-      .two{
-          width: 24px;
-      }
-
-      .three{
-          width: 14px;
-          
-      }
-
-
-
- 
-    
- span:first-child
-{
-  transform-origin: 0% 0%;
-  
-}
-
-
-
- span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-      
-input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-4px, -1px);
-  background: map-get($colors, "primary");
-}
-
-input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-input:checked ~ span:nth-last-child(2)
-{
-  
-  transform: rotate(-45deg) translate(0, -1px);
-  width: 33px;
-}
-
-input:checked ~ ul
-    {
-      transform: none;
-    }
-
-    }
-
-.menu{
-
-    li
-    {
-      padding: 10px 0;
-      
-      font-family: 'lato';
-      font-size: 1.8rem;
-    }
-    
-    
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: map-get($colors, "accent");
-  list-style-type: none;
-
-
-  /* to stop flickering of text in safari */
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-    }
-
-
-    .logo{
-        display: block;
-        position: absolute;
-        top: 7px;
-        right: 40px;
-        z-index: 1;
-        color: white;
-        font-size: 12px;
-
-        h1{
-            font-weight: 400;
-        }
-    }
 
 /*************
 Title mobile
@@ -271,21 +118,18 @@ Title mobile
         }
     }
  .lines{
-         
-           
-     
  
 
  .before, .after{
 
-    background-color: map-get($colors, 'accent');
+    background-color: map-get($colors, 'accent_3');
     height: 2px;
-    width: 50px;
+    
     
  }
 .before{
-    width: 15%;
-    left: 0;
+    width: 10%;
+    left: 5%;
     position: absolute;
     top: 50%;
     z-index: 1;
@@ -293,11 +137,11 @@ Title mobile
 }
 
 .after{
-width: 15%;
+width: 10%;
     position: absolute;
     top: 50%;
     z-index: 1;
-    right: 0;
+    right: 5%;
     transform: translateY(-50);  
 
 }
@@ -316,5 +160,51 @@ width: 15%;
 }
 
 
+
+
+}
+
+footer{
+   height: auto;
+    
+    position: relative;
+    top: 84%;
+    z-index: 3;
+    .icon-container{
+        @include even_justify(15vh, space-evenly);
+        width: 100%;
+        font-size: 32px;
+        align-items: flex-end;
+
+        
+        i{
+            color: map-get($colors, accent);
+            padding-bottom: 20px;
+    
+        }
+    }
+
+    .text{
+        text-align: center;
+        @include even_justify(8vh, space-around);
+       
+        
+        p{
+            text-align: center;
+            color: #c9c9c9;
+            font-weight: 400;
+            padding: 0 30px 0 30px;
+            
+        }
+
+        .tagline{
+            color: map-get($colors, secondary);
+            visibility: hidden;
+        }
+       
+    }
+  
+    
+   
 }
 
