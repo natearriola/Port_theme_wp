@@ -283,57 +283,69 @@ main .statement .button_container .lines .after {
 }
 
 footer {
-  height: auto;
+  height: 20vh;
   position: relative;
-  top: 84%;
-  z-index: 3;
+  top: 86%;
+}
+
+footer .tagline {
+  color: #CCB08D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 8vh;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 footer .icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 15vh;
   width: 100%;
-  font-size: 32px;
+  font-size: 36px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  height: 8vh;
 }
 
 footer .icon-container i {
   color: #84A9BF;
-  padding-bottom: 20px;
+  padding: 0 20px 0 20px;
 }
 
 footer .text {
   text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 8vh;
+  padding: 0 15px 0 15px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 footer .text p {
   text-align: center;
   color: #c9c9c9;
   font-weight: 400;
-  padding: 0 30px 0 30px;
-}
-
-footer .text .tagline {
-  color: #CCB08D;
-  visibility: hidden;
 }
 /*# sourceMappingURL=main.css.map */

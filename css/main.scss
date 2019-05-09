@@ -13,11 +13,11 @@ Other Stylesheets
 /***** 
 MIXINS 
 */
-@mixin even_justify($height, $justify) {
+@mixin even_justify( $justify) {
     display: flex;
         justify-content: $justify;
         align-items: center;
-       height: $height;
+       
 }
 
 
@@ -165,42 +165,53 @@ width: 10%;
 }
 
 footer{
-   height: auto;
+   height: 20vh;
     
     position: relative;
-    top: 84%;
-    z-index: 3;
-    .icon-container{
-        @include even_justify(15vh, space-evenly);
-        width: 100%;
-        font-size: 32px;
-        align-items: flex-end;
+    top: 86%;
 
+    .tagline{
+        color: map-get($colors, secondary);
+       
+       @include even_justify(center);
+       height: 8vh;
+       align-items: flex-end;
+       
+    }
+    .icon-container{
+        @include even_justify(center);
+        width: 100%;
+        font-size: 36px;
+        align-items: flex-end;
+        height: 8vh;
+        
         
         i{
             color: map-get($colors, accent);
-            padding-bottom: 20px;
+            padding: 0 20px 0 20px;
     
         }
     }
 
     .text{
         text-align: center;
-        @include even_justify(8vh, space-around);
+     justify-content: space-between;
+        height: 8vh;
+        display: flex;
+        padding: 0 15px 0 15px;
+        align-items: flex-end;
        
         
+     
         p{
             text-align: center;
             color: #c9c9c9;
             font-weight: 400;
-            padding: 0 30px 0 30px;
+            
             
         }
 
-        .tagline{
-            color: map-get($colors, secondary);
-            visibility: hidden;
-        }
+       
        
     }
   
