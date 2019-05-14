@@ -270,9 +270,9 @@ main .landing img {
 
 main .landing .cta {
   position: absolute;
-  bottom: 40%;
-  -webkit-transform: translateY(-40);
-          transform: translateY(-40);
+  bottom: 30%;
+  -webkit-transform: translateY(-30);
+          transform: translateY(-30);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
