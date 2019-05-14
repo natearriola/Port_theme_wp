@@ -45,7 +45,7 @@ SECTIONS
 */
 
 main{
-   
+  
 
 /*************
 Title mobile
@@ -53,15 +53,14 @@ Title mobile
 
 
 .content{
-height: 100%;
+
 background-color: map-get($colors, "secondary"); 
 padding: 2rem;  
 padding-bottom: 3rem; 
+
     .statement{
         text-align: left;
         
-     
-     
         .date{
             font-family: 'Lato';
             color: #d9d9d9;
@@ -73,7 +72,7 @@ padding-bottom: 3rem;
         
             color: map-get($colors, primary);
             font-size: 16px;
-            line-height: 140%;
+            line-height: 160%;
             width: 100%;
             padding-bottom: 20px;
         }
@@ -154,54 +153,58 @@ padding-bottom: 3rem;
 }
 
 footer{
-   
-   
-    .tagline{
-        color: map-get($colors, secondary);
+padding: 2rem 0 1rem 0;
+      
        
-       @include even_justify(center);
-       height: 8vh;
-       align-items: flex-end;
-       
-    }
-    .icon-container{
-        @include even_justify(center);
-        width: 100%;
-        font-size: 36px;
-        align-items: flex-end;
-        height: 8vh;
-        
-        
-        i{
-            color: map-get($colors, accent);
-            padding: 0 20px 0 20px;
-    
-        }
-    }
 
-    .text{
-        text-align: center;
-     justify-content: space-between;
-        height: 8vh;
-        display: flex;
-        padding: 0 15px 0 15px;
-        align-items: flex-end;
+      
        
+        .tagline{
+            color: map-get($colors, secondary);
+           
+           @include even_justify(center);
+         height: 25px;
+           align-items: flex-start;
+           
+        }
+        .icon-container{
+            @include even_justify(center);
+            width: 100%;
+            font-size: 36px;
+            align-items: flex-end;
+            
+            
+            
+            i{
+                color: map-get($colors, accent);
+                padding: 0 20px 0 20px;
         
-     
-        p{
+            }
+        }
+    
+        .text{
             text-align: center;
-            color: #c9c9c9;
-            font-weight: 400;
+         justify-content: space-between;
             
+            display: flex;
+            padding: 0 15px 0 15px;
+            align-items: flex-end;
+           
             
+         
+            p{
+                text-align: center;
+                color: #c9c9c9;
+                font-weight: 400;
+                
+                
+            }
+    
+           
+           
         }
-
-       
+      
+        
        
     }
-  
-    
-   
-}
 

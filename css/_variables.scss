@@ -7,6 +7,16 @@ $colors:(
 );
 
 
+
+@mixin even_justify( $justify) {
+    display: flex;
+        justify-content: $justify;
+        align-items: center;
+       
+}
+
+
+
 @mixin for-phone-only {
     @media (max-width: 599px) {
       @content;

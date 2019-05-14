@@ -12,12 +12,34 @@ FONTS
 /*** 
 VAR
 */
-main header {
+body header {
   z-index: 1;
-  height: 90%;
 }
 
-main header .img_container {
+body header .cta {
+  position: absolute;
+  bottom: 45%;
+  -webkit-transform: translateY(-45);
+          transform: translateY(-45);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
+}
+
+body header .cta p {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'lato';
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+body header .img_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,27 +51,27 @@ main header .img_container {
           align-items: center;
 }
 
-main header .img_container img {
+body header .img_container img {
   max-width: 100%;
 }
 
-main nav {
+body nav {
   position: fixed;
   z-index: 4;
 }
 
-main nav a {
+body nav a {
   text-decoration: none;
   color: #022840;
   -webkit-transition: color .3 ease;
   transition: color .3 ease;
 }
 
-main nav a:hover {
+body nav a:hover {
   color: #8C4227;
 }
 
-main nav .menuToggle {
+body nav .menuToggle {
   display: block;
   position: relative;
   top: 30px;
@@ -57,7 +79,7 @@ main nav .menuToggle {
   z-index: 1;
 }
 
-main nav .menuToggle input {
+body nav .menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
@@ -72,7 +94,7 @@ main nav .menuToggle input {
   border: 2px solid red;
 }
 
-main nav .menuToggle span {
+body nav .menuToggle span {
   display: block;
   height: 3px;
   margin-bottom: 5px;
@@ -88,49 +110,49 @@ main nav .menuToggle span {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-main nav .menuToggle .two {
+body nav .menuToggle .two {
   width: 24px;
 }
 
-main nav .menuToggle .three {
+body nav .menuToggle .three {
   width: 14px;
 }
 
-main nav .menuToggle span:first-child {
+body nav .menuToggle span:first-child {
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
 }
 
-main nav .menuToggle span:nth-last-child(2) {
+body nav .menuToggle span:nth-last-child(2) {
   -webkit-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
 }
 
-main nav .menuToggle input:checked ~ span {
+body nav .menuToggle input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-4px, -1px);
           transform: rotate(45deg) translate(-4px, -1px);
   background: #292929;
 }
 
-main nav .menuToggle input:checked ~ span:nth-last-child(3) {
+body nav .menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   -webkit-transform: rotate(0deg) scale(0.2, 0.2);
           transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-main nav .menuToggle input:checked ~ span:nth-last-child(2) {
+body nav .menuToggle input:checked ~ span:nth-last-child(2) {
   -webkit-transform: rotate(-45deg) translate(0, -1px);
           transform: rotate(-45deg) translate(0, -1px);
   width: 33px;
 }
 
-main nav .menuToggle input:checked ~ ul {
+body nav .menuToggle input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
 }
 
-main nav .menu {
+body nav .menu {
   position: absolute;
   width: 300px;
   margin: -100px 0 0 -50px;
@@ -149,13 +171,13 @@ main nav .menu {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-main nav .menu li {
+body nav .menu li {
   padding: 10px 0;
   font-family: 'lato';
   font-size: 1.8rem;
 }
 
-main .logo {
+body .logo {
   display: block;
   position: absolute;
   top: 7px;
@@ -165,24 +187,24 @@ main .logo {
   font-size: 12px;
 }
 
-main .logo h1 {
+body .logo h1 {
   font-weight: 400;
 }
 
-main .title {
+body .title {
   position: absolute;
   top: 8%;
   padding-left: 40px;
 }
 
-main .title h1 {
+body .title h1 {
   font-weight: 400;
   color: #8C4227;
   font-size: 4rem;
   text-align: left;
 }
 
-main .title p {
+body .title p {
   position: relative;
   bottom: 35px;
   font-weight: 400;
@@ -217,7 +239,6 @@ Title mobile
 }
 
 main .content {
-  height: 100%;
   background-color: #CCB08D;
   padding: 2rem;
   padding-bottom: 3rem;
@@ -237,7 +258,7 @@ main .content .statement .date {
 main .content .statement p {
   color: #292929;
   font-size: 16px;
-  line-height: 140%;
+  line-height: 160%;
   width: 100%;
   padding-bottom: 20px;
 }
@@ -296,6 +317,10 @@ main .content .statement .button_container .lines .after {
           transform: translateY(-50);
 }
 
+footer {
+  padding: 2rem 0 1rem 0;
+}
+
 footer .tagline {
   color: #CCB08D;
   display: -webkit-box;
@@ -307,10 +332,10 @@ footer .tagline {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 8vh;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  height: 25px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 footer .icon-container {
@@ -328,7 +353,6 @@ footer .icon-container {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: 8vh;
 }
 
 footer .icon-container i {
@@ -341,7 +365,6 @@ footer .text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

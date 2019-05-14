@@ -15,10 +15,31 @@ VAR
 
 
 
-main{
+body{
+
+
     header{ 
+        
         z-index: 1;
-        height:90%;
+       
+
+        .cta{
+            position: absolute;
+            bottom: 45%;
+            transform: translateY(-45);
+           width: 100%;
+            display: flex;
+            justify-content: center;
+          padding-top: 50px;
+
+          p{
+              color: white;
+              text-transform: uppercase;
+              font-family: 'lato';
+              font-weight: 700;
+              letter-spacing: 4px;
+          }
+        }
 .img_container{
     display: flex;
     justify-content: center;
@@ -206,5 +227,4 @@ input:checked ~ ul
             text-align: left;
         }
     }
-
 }
