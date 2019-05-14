@@ -55,12 +55,12 @@ Title mobile
 .content{
 
 background-color: map-get($colors, "secondary"); 
-padding: 2rem;  
-padding-bottom: 3rem; 
+padding: 3rem;  
+height: 100%;
 
     .statement{
         text-align: left;
-        
+        padding-bottom: 3rem;
         .date{
             font-family: 'Lato';
             color: #d9d9d9;
@@ -82,16 +82,16 @@ padding-bottom: 3rem;
          
          .button{
              border: 1px solid map-get($colors, 'accent_2');
-             padding: 15px;
+             padding: 10px 2px 10px 2px;
              margin-left: auto;
              margin-right: auto;
-             width: 50%;
+             width: 40%;
              display: flex;
              justify-content: center;
              align-items: center;
              
              a{
-                 font-size: 16px;
+                 font-size: 12px;
                  text-decoration: none;
                  color: map-get($colors, 'accent_2');
                  font-weight: 700;
@@ -111,7 +111,7 @@ padding-bottom: 3rem;
       }
      .before{
          width: 10%;
-         left: 5%;
+         left: 15%;
          position: absolute;
          top: 50%;
          z-index: 1;
@@ -123,7 +123,7 @@ padding-bottom: 3rem;
          position: absolute;
          top: 50%;
          z-index: 1;
-         right: 5%;
+         right: 15%;
          transform: translateY(-50);  
      
      }
