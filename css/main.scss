@@ -120,13 +120,13 @@ Title mobile
 
 background-color: map-get($colors, "secondary"); 
 padding: 3rem;  
-height: 100%;
+
 
 
 @include for-desktop-up{
-    height: auto;
+    
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     padding: 5rem;
     
@@ -136,13 +136,7 @@ height: 100%;
 
 
     .statement{
-        @include for-desktop-up{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-           
-        }
+        
         text-align: left;
         
         .date{
@@ -158,13 +152,9 @@ height: 100%;
   top:8%;
   
 @include for-desktop-up{
-    position: relative;
-    top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-   
+    position: static;
+    
+    
     
 }
     h1{
@@ -176,18 +166,19 @@ height: 100%;
         @include for-desktop-up{
             font-size: 6rem;
         }
-    }
-
-    p{
-       
-        position: relative;
-        bottom: 35px;
-        font-weight: 400;
-        text-align: left;
-        @include for-desktop-up{
-            bottom: 100px;
+        span{
+            font-size: 16px;
+            display: block;
+            color: map-get($colors, primary);
+            font-weight: 400;
+            text-align: left;
+            @include for-desktop-up{
+                bottom: 100px;
+            }
         }
     }
+
+   
 }
         p{
         
@@ -222,7 +213,7 @@ height: 100%;
              width: 40%;
             
              @include for-desktop-up{
-                 width: 100%;
+                 width: 15%;
                  padding: 10px 20px 10px 20px ;
              }
              
