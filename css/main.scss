@@ -156,7 +156,7 @@ padding: 3rem;
         font-size: 4rem;
         text-align: left;
        
-        @include for-desktop-up{
+        @include for-big-desktop-up{
             font-size: 6rem;
         }
         span{

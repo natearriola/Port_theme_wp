@@ -331,7 +331,7 @@ main .content .statement .title h1 {
   text-align: left;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1800px) {
   main .content .statement .title h1 {
     font-size: 6rem;
   }
