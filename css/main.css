@@ -19,7 +19,7 @@ body header {
 @media (min-width: 900px) {
   body header {
     display: block;
-    height: 50px;
+    height: 40px;
     padding: 1rem;
     width: 100%;
     left: 0;
@@ -302,21 +302,6 @@ main .content {
   padding: 3rem;
 }
 
-@media (min-width: 1200px) {
-  main .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding: 5rem;
-  }
-}
-
 main .content .statement {
   text-align: left;
 }
@@ -358,12 +343,6 @@ main .content .statement .title h1 span {
   color: #292929;
   font-weight: 400;
   text-align: left;
-}
-
-@media (min-width: 1200px) {
-  main .content .statement .title h1 span {
-    bottom: 100px;
-  }
 }
 
 main .content .statement p {
@@ -468,15 +447,9 @@ main .content .statement .icon-container {
           align-items: flex-end;
 }
 
-@media (min-width: 1200px) {
-  main .content .statement .icon-container {
-    font-size: 48px;
-  }
-}
-
 main .content .statement .icon-container i {
   color: #8C4227;
-  padding: 50px 30px 0 50px;
+  padding: 20px 30px 0 50px;
 }
 
 footer {

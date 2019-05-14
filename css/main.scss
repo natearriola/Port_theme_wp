@@ -123,20 +123,13 @@ padding: 3rem;
 
 
 
-@include for-desktop-up{
-    
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 5rem;
-    
-}
+
 
 
 
 
     .statement{
-        
+       
         text-align: left;
         
         .date{
@@ -172,9 +165,7 @@ padding: 3rem;
             color: map-get($colors, primary);
             font-weight: 400;
             text-align: left;
-            @include for-desktop-up{
-                bottom: 100px;
-            }
+            
         }
     }
 
@@ -273,15 +264,11 @@ padding: 3rem;
         font-size: 36px;
         align-items: flex-end;
         
-        @include for-desktop-up{
-            font-size: 48px;
-          
-           
-        }
+      
         
         i{
             color: map-get($colors, accent_3);
-            padding: 50px 30px 0 50px;
+            padding: 20px 30px 0 50px;
     
         }
     }
