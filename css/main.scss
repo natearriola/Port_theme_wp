@@ -22,6 +22,8 @@ MIXINS
 
 
 
+
+
 /****************
 Documents
 */
@@ -48,116 +50,103 @@ main{
 /*************
 Title mobile
 **/
-.title{
-    
-    position: absolute;
-    top: 80px;
-    left: 40px;
 
-    h1{
-        font-weight: 400;
-        color: map-get($colors, "accent_3");
-        font-size: 4.5rem;
+
+.content{
+height: 100%;
+background-color: map-get($colors, "secondary"); 
+padding: 2rem;  
+padding-bottom: 3rem; 
+    .statement{
         text-align: left;
-    }
-
-    p{
-       
-        position: relative;
-        bottom: 60px;
-        font-weight: 400;
-        text-align: left;
-    }
-}
-
-.statement{
-   position: absolute;
-   top: 80%;
-   background-color: map-get($colors, "secondary");
-   height: 80vh;
-   padding: 40px;
-   padding-top: 0;
-   text-align: left;
-
-   .date{
-       font-family: 'Lato';
-       color: #d9d9d9;
-       text-align: left;
-       padding: 0;
-   }
-
-   p{
-   
-      
-       font-size: 16px;
-       line-height: 160%;
-       width: 100%;
-       padding-bottom: 20px;
-   }
-  
-   .button_container{
-    position: relative;
-    
-    .button{
-        border: 1px solid map-get($colors, 'accent_2');
-        padding: 15px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         
-        a{
-            font-size: 16px;
-            text-decoration: none;
-            color: map-get($colors, 'accent_2');
-            font-weight: 700;
-            text-align: center;
-            
+     
+     
+        .date{
+            font-family: 'Lato';
+            color: #d9d9d9;
+            text-align: left;
+            padding: 0;
         }
-    }
- .lines{
- 
+     
+        p{
+        
+            color: map-get($colors, primary);
+            font-size: 16px;
+            line-height: 140%;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+       
+        .button_container{
+         position: relative;
+         
+         .button{
+             border: 1px solid map-get($colors, 'accent_2');
+             padding: 15px;
+             margin-left: auto;
+             margin-right: auto;
+             width: 50%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             
+             a{
+                 font-size: 16px;
+                 text-decoration: none;
+                 color: map-get($colors, 'accent_2');
+                 font-weight: 700;
+                 text-align: center;
+                 
+             }
+         }
+      .lines{
+      
+     
+      .before, .after{
+     
+         background-color: map-get($colors, 'accent_3');
+         height: 2px;
+         
+         
+      }
+     .before{
+         width: 10%;
+         left: 5%;
+         position: absolute;
+         top: 50%;
+         z-index: 1;
+         transform: translateY(-50);  
+     }
+     
+     .after{
+     width: 10%;
+         position: absolute;
+         top: 50%;
+         z-index: 1;
+         right: 5%;
+         transform: translateY(-50);  
+     
+     }
+     
+     
+     
+     
+        }
+        
+     
+     
+     }
+     
+     
+     
+     }
 
- .before, .after{
 
-    background-color: map-get($colors, 'accent_3');
-    height: 2px;
-    
-    
- }
-.before{
-    width: 10%;
-    left: 5%;
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    transform: translateY(-50);  
+
 }
 
-.after{
-width: 10%;
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    right: 5%;
-    transform: translateY(-50);  
 
-}
-
-
-
-
-   }
-   
-
-
-}
-
-
-
-}
 
 
 
@@ -165,11 +154,8 @@ width: 10%;
 }
 
 footer{
-   height: 20vh;
-    
-    position: relative;
-    top: 86%;
-
+   
+   
     .tagline{
         color: map-get($colors, secondary);
        

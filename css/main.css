@@ -13,12 +13,24 @@ FONTS
 VAR
 */
 main header {
-  background-image: url("../imgs/landing.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   z-index: 1;
-  height: 80vh;
+  height: 90%;
+}
+
+main header .img_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main header .img_container img {
+  max-width: 100%;
 }
 
 main nav {
@@ -157,6 +169,26 @@ main .logo h1 {
   font-weight: 400;
 }
 
+main .title {
+  position: absolute;
+  top: 8%;
+  padding-left: 40px;
+}
+
+main .title h1 {
+  font-weight: 400;
+  color: #8C4227;
+  font-size: 4rem;
+  text-align: left;
+}
+
+main .title p {
+  position: relative;
+  bottom: 35px;
+  font-weight: 400;
+  text-align: left;
+}
+
 /***** 
 MIXINS 
 */
@@ -184,55 +216,37 @@ Title mobile
 **/
 }
 
-main .title {
-  position: absolute;
-  top: 80px;
-  left: 40px;
-}
-
-main .title h1 {
-  font-weight: 400;
-  color: #8C4227;
-  font-size: 4.5rem;
-  text-align: left;
-}
-
-main .title p {
-  position: relative;
-  bottom: 60px;
-  font-weight: 400;
-  text-align: left;
-}
-
-main .statement {
-  position: absolute;
-  top: 80%;
+main .content {
+  height: 100%;
   background-color: #CCB08D;
-  height: 80vh;
-  padding: 40px;
-  padding-top: 0;
+  padding: 2rem;
+  padding-bottom: 3rem;
+}
+
+main .content .statement {
   text-align: left;
 }
 
-main .statement .date {
+main .content .statement .date {
   font-family: 'Lato';
   color: #d9d9d9;
   text-align: left;
   padding: 0;
 }
 
-main .statement p {
+main .content .statement p {
+  color: #292929;
   font-size: 16px;
-  line-height: 160%;
+  line-height: 140%;
   width: 100%;
   padding-bottom: 20px;
 }
 
-main .statement .button_container {
+main .content .statement .button_container {
   position: relative;
 }
 
-main .statement .button_container .button {
+main .content .statement .button_container .button {
   border: 1px solid #022840;
   padding: 15px;
   margin-left: auto;
@@ -249,7 +263,7 @@ main .statement .button_container .button {
           align-items: center;
 }
 
-main .statement .button_container .button a {
+main .content .statement .button_container .button a {
   font-size: 16px;
   text-decoration: none;
   color: #022840;
@@ -257,12 +271,12 @@ main .statement .button_container .button a {
   text-align: center;
 }
 
-main .statement .button_container .lines .before, main .statement .button_container .lines .after {
+main .content .statement .button_container .lines .before, main .content .statement .button_container .lines .after {
   background-color: #8C4227;
   height: 2px;
 }
 
-main .statement .button_container .lines .before {
+main .content .statement .button_container .lines .before {
   width: 10%;
   left: 5%;
   position: absolute;
@@ -272,7 +286,7 @@ main .statement .button_container .lines .before {
           transform: translateY(-50);
 }
 
-main .statement .button_container .lines .after {
+main .content .statement .button_container .lines .after {
   width: 10%;
   position: absolute;
   top: 50%;
@@ -280,12 +294,6 @@ main .statement .button_container .lines .after {
   right: 5%;
   -webkit-transform: translateY(-50);
           transform: translateY(-50);
-}
-
-footer {
-  height: 20vh;
-  position: relative;
-  top: 86%;
 }
 
 footer .tagline {
