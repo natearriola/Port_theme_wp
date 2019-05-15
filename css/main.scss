@@ -58,6 +58,7 @@ main{
     grid-template-columns: .7fr 1fr;
     grid-auto-rows: 90vh;
     justify-content: center;
+    align-items: center;
    
   
     
@@ -120,7 +121,7 @@ Title mobile
 
 background-color: map-get($colors, "secondary"); 
 padding: 3rem;  
-
+height: 90%;
 
 
 
@@ -131,6 +132,14 @@ padding: 3rem;
     .statement{
        
         text-align: left;
+       
+        height: 90%;
+        @include for-desktop-up{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
         
         .date{
             font-family: 'Lato';
@@ -172,8 +181,8 @@ padding: 3rem;
    
 }
         p{
-        
-            color: map-get($colors, primary);
+            font-family: 'lato';
+            color: #3B3B3B;
             font-size: 16px;
             line-height: 160%;
             width: 100%;
@@ -196,25 +205,38 @@ padding: 3rem;
              align-items: center;
              margin-left: auto;
              margin-right: auto;
+             cursor: pointer;
+             position: relative;
+             transition: 0.2s ease-in-out;
              
          .button{
-             border: 1px solid map-get($colors, 'accent_2');
+             background-color: map-get($colors, accent);
+           
+            transition: box-shadow 0.4s linear;
+            margin: 0.2em; /* Increased margin since the box-shado expands outside the element, like outline */
              padding: 15px 10px 15px 10px;
              text-align: center;
              width: 40%;
+             
+             
             
              @include for-desktop-up{
-                 width: 15%;
-                 padding: 10px 20px 10px 20px ;
+                 width: 100%;
+                 padding: 10px 30px 10px 30px ;
              }
              
              a{
                  font-size: 12px;
                  text-decoration: none;
-                 color: map-get($colors, 'accent_2');
+                 color: map-get($colors, primary);
                  font-weight: 700;
-            
-                 
+                transition: color .4s ease-in-out;
+                 &:hover{
+                     color: #3B3B3B;
+                 }
+                 @include for-desktop-up{
+                     font-size: 16px;
+                 }
              }
          }
       .lines{
@@ -256,22 +278,7 @@ padding: 3rem;
      }
      
      
-     .icon-container{
-        
-         
-        @include even_justify(center);
-        width: 100%;
-        font-size: 36px;
-        align-items: flex-end;
-        
-      
-        
-        i{
-            color: map-get($colors, accent_3);
-            padding: 20px 30px 0 50px;
     
-        }
-    }
      }
 
 
@@ -287,15 +294,45 @@ padding: 3rem;
 
 footer{
 padding: 2rem 0 1rem 0;
-      
+
        
 @include for-tablet-landscape-up{
     padding: 0;
   background-color: map-get($colors, primary);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  
+  width: 100%;
 }
       
        
-        
+.icon-container{
+      
+     width: 40%;    
+    @include even_justify(center);
+    font-size: 36px;
+    align-items: center;
+ 
+    
+    a{
+        text-decoration: none;
+        color: map-get($colors, accent);
+        transition: color .3s ease-in;
+        &:hover{
+            color: white;
+        }
+    i{
+        padding: 0px 40px 0 60px;
+        @include for-desktop-up{
+            font-size: 48px;
+        }
+
+    }
+}
+
+
+}
       
     
         .text{
@@ -305,11 +342,19 @@ padding: 2rem 0 1rem 0;
             display: flex;
             padding: 0 15px 0 15px;
             align-items: flex-end;
-           
+         
             @include for-tablet-landscape-up{
               
                 padding: 2rem;
+             
+           
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-grow: 1;
             }
+
+            
          
             p{
                 text-align: center;
@@ -322,7 +367,6 @@ padding: 2rem 0 1rem 0;
                 color: map-get($colors, secondary);
                visibility: hidden;
                 text-align: center;
-               
                       @include for-tablet-landscape-up{
                           visibility: visible;
                       }

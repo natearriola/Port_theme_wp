@@ -23,8 +23,9 @@ body header {
     padding: 1rem;
     width: 100%;
     left: 0;
-    position: static;
+    background-color: #292929;
     top: 0;
+    position: fixed;
   }
 }
 
@@ -176,6 +177,61 @@ body .logo h1 {
   font-weight: 400;
 }
 
+body .desktop-menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  body .desktop-menu {
+    font-family: 'lato';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 40%;
+    -webkit-transform: translateX(-40);
+            transform: translateX(-40);
+  }
+}
+
+body .desktop-menu a {
+  font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+  body .desktop-menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #CCB08D;
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body .desktop-menu a li {
+    list-style: none;
+    display: inline-block;
+  }
+}
+
+body .desktop-menu a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+body .desktop-menu a:hover::after {
+  width: 100%;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
 /***** 
 MIXINS 
 */
@@ -219,6 +275,9 @@ Title mobile
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -300,10 +359,30 @@ main .landing .cta p {
 main .content {
   background-color: #CCB08D;
   padding: 3rem;
+  height: 90%;
 }
 
 main .content .statement {
   text-align: left;
+  height: 90%;
+}
+
+@media (min-width: 1200px) {
+  main .content .statement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main .content .statement .date {
@@ -346,7 +425,8 @@ main .content .statement .title h1 span {
 }
 
 main .content .statement p {
-  color: #292929;
+  font-family: 'lato';
+  color: #3B3B3B;
   font-size: 16px;
   line-height: 160%;
   width: 100%;
@@ -372,6 +452,10 @@ main .content .statement .button_container {
           align-items: center;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 @media (min-width: 1200px) {
@@ -381,7 +465,13 @@ main .content .statement .button_container {
 }
 
 main .content .statement .button_container .button {
-  border: 1px solid #022840;
+  background-color: #84A9BF;
+  -webkit-transition: -webkit-box-shadow 0.4s linear;
+  transition: -webkit-box-shadow 0.4s linear;
+  transition: box-shadow 0.4s linear;
+  transition: box-shadow 0.4s linear, -webkit-box-shadow 0.4s linear;
+  margin: 0.2em;
+  /* Increased margin since the box-shado expands outside the element, like outline */
   padding: 15px 10px 15px 10px;
   text-align: center;
   width: 40%;
@@ -389,16 +479,28 @@ main .content .statement .button_container .button {
 
 @media (min-width: 1200px) {
   main .content .statement .button_container .button {
-    width: 15%;
-    padding: 10px 20px 10px 20px;
+    width: 100%;
+    padding: 10px 30px 10px 30px;
   }
 }
 
 main .content .statement .button_container .button a {
   font-size: 12px;
   text-decoration: none;
-  color: #022840;
+  color: #292929;
   font-weight: 700;
+  -webkit-transition: color .4s ease-in-out;
+  transition: color .4s ease-in-out;
+}
+
+main .content .statement .button_container .button a:hover {
+  color: #3B3B3B;
+}
+
+@media (min-width: 1200px) {
+  main .content .statement .button_container .button a {
+    font-size: 16px;
+  }
 }
 
 main .content .statement .button_container .lines {
@@ -430,7 +532,27 @@ main .content .statement .button_container .lines .after {
           transform: translateY(-50);
 }
 
-main .content .statement .icon-container {
+footer {
+  padding: 2rem 0 1rem 0;
+}
+
+@media (min-width: 900px) {
+  footer {
+    padding: 0;
+    background-color: #292929;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
+footer .icon-container {
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,26 +562,28 @@ main .content .statement .icon-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   font-size: 36px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: center;
 }
 
-main .content .statement .icon-container i {
-  color: #8C4227;
-  padding: 20px 30px 0 50px;
+footer .icon-container a {
+  text-decoration: none;
+  color: #84A9BF;
+  -webkit-transition: color .3s ease-in;
+  transition: color .3s ease-in;
 }
 
-footer {
-  padding: 2rem 0 1rem 0;
+footer .icon-container a:hover {
+  color: white;
 }
 
-@media (min-width: 900px) {
-  footer {
-    padding: 0;
-    background-color: #292929;
+footer .icon-container a i {
+  padding: 0px 40px 0 60px;
+}
+
+@media (min-width: 1200px) {
+  footer .icon-container a i {
+    font-size: 48px;
   }
 }
 
@@ -480,6 +604,18 @@ footer .text {
 @media (min-width: 900px) {
   footer .text {
     padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 

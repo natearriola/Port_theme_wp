@@ -29,9 +29,9 @@ body{
            
             width: 100%;
             left: 0;
-            position: static;
+            background-color: map-get($colors, primary);
             top: 0;
-
+            position: fixed;
         }
 
         
@@ -197,6 +197,52 @@ input:checked ~ ul
         h1{
             font-weight: 400;
         }
+    }
+
+    .desktop-menu{
+        display: none;
+        cursor:pointer;
+        @include for-desktop-up{
+            font-family: 'lato';
+            display: flex;
+            
+          
+           position: absolute;
+           top: 10px;
+           left: 40%;
+           transform: translateX(-40);
+        }
+     
+        a{
+            font-size: 18px;
+            @include for-desktop-up{
+                display: inline-block;
+                text-decoration: none;
+                color: map-get($colors, secondary);
+                padding: 0 25px;
+            }
+           
+            li{
+                @include for-desktop-up{
+                list-style: none;
+                
+                display: inline-block;
+                }
+            }
+        }
+
+        a::after{
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: width .3s;
+           }
+           a:hover::after{
+            width: 100%;
+            transition: width .3s;
+           }
     }
 
     
