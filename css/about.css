@@ -2,13 +2,27 @@
 FONTS 
 */
 @import url("https://fonts.googleapis.com/css?family=Lato|Old+Standard+TT:400,700");
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  background-color: #292929;
+  color: white;
+}
+
 /*** 
 VAR
 */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Old Standard tt';
+  font-family: "Old Standard tt";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #CCB08D;
@@ -21,7 +35,7 @@ html, body {
 HEADER
 ***/
 body header {
-  z-index: 1;
+  z-index: 2;
   display: block;
   height: 40px;
   padding: 1rem;
@@ -35,14 +49,14 @@ body header {
 
 body nav {
   position: fixed;
-  z-index: 4;
+  z-index: 3;
 }
 
 body nav a {
   text-decoration: none;
   color: #022840;
-  -webkit-transition: color .3 ease;
-  transition: color .3 ease;
+  -webkit-transition: color 0.3 ease;
+  transition: color 0.3 ease;
 }
 
 body nav a:hover {
@@ -152,7 +166,7 @@ body nav .menu {
 
 body nav .menu li {
   padding: 10px 0;
-  font-family: 'lato';
+  font-family: "lato";
   font-size: 1.8rem;
 }
 
@@ -183,7 +197,7 @@ body .desktop-menu {
 
 @media (min-width: 1200px) {
   body .desktop-menu {
-    font-family: 'lato';
+    font-family: "lato";
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -221,13 +235,295 @@ body .desktop-menu a::after {
   width: 0;
   height: 2px;
   background: #fff;
-  -webkit-transition: width .3s;
-  transition: width .3s;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
 }
 
 body .desktop-menu a:hover::after {
   width: 100%;
-  -webkit-transition: width .3s;
-  transition: width .3s;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+/****************
+MAIN CONTENT 
+****/
+main {
+  padding-bottom: 50px;
+}
+
+main .landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 63px;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  main .landing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+main .landing h1 {
+  position: absolute;
+  font-family: "Old school tt";
+  color: #CCB08D;
+  z-index: 1;
+  left: 5%;
+  -webkit-transform: translateX(-95);
+          transform: translateX(-95);
+  top: 10%;
+  -webkit-transform: translateY(-90);
+          transform: translateY(-90);
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  main .landing h1 {
+    top: 20%;
+    -webkit-transform: translateY(-80);
+            transform: translateY(-80);
+    left: 7%;
+    -webkit-transform: translateX(-93);
+            transform: translateX(-93);
+    font-size: 72px;
+  }
+}
+
+main .landing img {
+  display: block;
+  max-width: 100%;
+}
+
+main .info {
+  padding: 25px;
+}
+
+@media (min-width: 900px) {
+  main .info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+        grid-template-areas: "pers prof" "cont cont2";
+    grid-gap: 2px;
+    padding: 25px;
+  }
+}
+
+main .info h1 {
+  color: white;
+  font-family: "old school tt";
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  main .info h1 {
+    font-size: 24px;
+  }
+}
+
+main .info .title {
+  grid-area: pers;
+}
+
+main .info .title2 {
+  grid-area: prof;
+}
+
+main .info p {
+  font-family: "lato";
+  font-size: 12px;
+  line-height: 160%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media (min-width: 900px) {
+  main .info p {
+    font-size: 16px;
+  }
+}
+
+main .info .cont1 {
+  grid-area: cont;
+}
+
+main .info .cont2 {
+  grid-area: cont2;
+}
+
+main .contact-resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  main .contact-resume {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+main .contact-resume .resume {
+  margin-top: 50px;
+  text-align: left;
+  font-size: 18px;
+  padding-left: 25px;
+  font-family: "lato";
+  color: #292929;
+}
+
+@media (min-width: 900px) {
+  main .contact-resume .resume {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  main .contact-resume .contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+main .contact-resume .contact-form .contact-title {
+  text-align: left;
+  padding-left: 25px;
+  font-family: "old school tt";
+  color: #292929;
+}
+
+@media (min-width: 900px) {
+  main .contact-resume .contact-form .contact-title {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+main .contact-resume .contact-form .contact-title h1 {
+  font-size: 18px;
+}
+
+main .contact-resume .contact-form form {
+  padding: 0 0 0 25px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #292929;
+  -webkit-transition: all 4s ease-in-out;
+  transition: all 4s ease-in-out;
+  font-size: 16px;
+  font-family: "lato";
+}
+
+@media (min-width: 900px) {
+  main .contact-resume .contact-form form {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+main .contact-resume .contact-form form .form-control {
+  width: 250px;
+  border: none;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+@media (min-width: 900px) {
+  main .contact-resume .contact-form form .form-control {
+    height: 25px;
+    width: 400px;
+  }
+}
+
+main .contact-resume .contact-form form .form-message {
+  width: 250px;
+  background-color: #292929;
+  color: white;
+  outline: none;
+}
+
+@media (min-width: 900px) {
+  main .contact-resume .contact-form form .form-message {
+    height: 120px;
+    width: 400px;
+  }
+}
+
+main .contact-resume .contact-form form .form-control-submit {
+  width: 250px;
+  color: #292929;
+  background-color: #84A9BF;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.3s background ease-in;
+  transition: 0.3s background ease-in;
+}
+
+@media (min-width: 900px) {
+  main .contact-resume .contact-form form .form-control-submit {
+    width: 400px;
+  }
+}
+
+main .contact-resume .contact-form form .form-control-submit:hover {
+  cursor: pointer;
+  background-color: #97c2db;
 }
 /*# sourceMappingURL=about.css.map */

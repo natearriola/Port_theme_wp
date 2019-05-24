@@ -1,0 +1,12 @@
+body {
+  footer {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 12px;
+
+    background-color: map-get($colors, primary);
+    color: white;
+  }
+}
