@@ -1,382 +1,245 @@
 /***
 FONTS 
 */
-@import url('https://fonts.googleapis.com/css?family=Lato|Old+Standard+TT:400,700');
+@import url("https://fonts.googleapis.com/css?family=Lato|Old+Standard+TT:400,700");
 
 /****** 
 Other Stylesheets
 */
-@import './header';
-@import './variables';
-
+@import "./header";
+@import "./variables";
+@import "./footer";
 
 /***** 
 MIXINS 
 */
-@mixin even_justify( $justify) {
-    display: flex;
-        justify-content: $justify;
-        align-items: center;
-       
+@mixin even_justify($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
 }
-
-
-
-
 
 /****************
 Documents
 */
-  
-html,body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Old Standard tt'; 
-    box-sizing: border-box;
-   background-color: map-get($colors, primary);
-    height: 100%;
-    width: 100%;
-    font-size: 12px;
-    
 
-    @include for-tablet-landscape-up{
-        overflow-x: hidden;
-        
-        
-        
-    }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Old Standard tt";
+  box-sizing: border-box;
+  background-color: map-get($colors, primary);
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+
+  @include for-tablet-landscape-up {
+    overflow-x: hidden;
+  }
 }
-
 
 /*****
 SECTIONS
 */
 
-main{
-  @include for-desktop-up{
+main {
+  @include for-desktop-up {
     display: grid;
-    grid-template-columns: .7fr 1fr;
+    grid-template-columns: 0.7fr 1fr;
     grid-auto-rows: 90vh;
     justify-content: center;
     align-items: center;
-   
-  
-    
   }
-.landing{
+  .landing {
     @include even_justify(center);
-    
-    @include for-desktop-up{
+
+    @include for-desktop-up {
+      @include even_justify(flex-end);
+    }
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+
+      @include for-desktop-up {
         @include even_justify(flex-end);
-       
-    
-      }
-
-        img{
-       
-           max-height: 100%;
-        max-width: 100%;
-
-        @include for-desktop-up{
-            @include even_justify(flex-end);
-           width: 100%;
-        
-          }
-        } 
-    
-    
-    
-
-    .cta{
-        position: absolute;
-        bottom: 30%;
-        transform: translateY(-30);
-       width: 100%;
-        display: flex;
-        justify-content: center;
-      padding-top: 50px;
-
-      @include for-desktop-up{
-          visibility: hidden;
-      }
-
-      p{
-          color: white;
-          text-transform: uppercase;
-          font-family: 'lato';
-          font-weight: 700;
-          letter-spacing: 4px;
+        width: 100%;
       }
     }
 
-   
-}
-/*************
+    .cta {
+      position: absolute;
+      bottom: 30%;
+      transform: translateY(-30);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+
+      @include for-desktop-up {
+        visibility: hidden;
+      }
+
+      p {
+        color: white;
+        text-transform: uppercase;
+        font-family: "lato";
+        font-weight: 700;
+        letter-spacing: 4px;
+      }
+    }
+  }
+  /*************
 Title mobile
 **/
 
+  .content {
+    background-color: map-get($colors, "secondary");
+    padding: 5rem;
+    height: 100%;
 
-.content{
-   
+    .statement {
+      text-align: left;
+      height: 100%;
 
-background-color: map-get($colors, "secondary"); 
-padding: 3rem;  
-height: 90%;
+      @include for-desktop-up {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
 
+        flex-direction: column;
+      }
 
-
-
-
-
-
-    .statement{
-       
+      .date {
+        font-family: "Lato";
+        color: #d9d9d9;
         text-align: left;
-       
-        height: 90%;
-        @include for-desktop-up{
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
+        padding: 0;
+        position: relative;
+        top: 30px;
+      }
+      .title {
+        position: absolute;
+        top: 8%;
+
+        @include for-desktop-up {
+          position: relative;
         }
-        
-        .date{
-            font-family: 'Lato';
-            color: #d9d9d9;
-            text-align: left;
-            padding: 0;
-            
-        }
-     .title{
-    
-    position: absolute;
-  top:8%;
-  
-@include for-desktop-up{
-    position: static;
-    
-    
-    
-}
-    h1{
-        font-weight: 400;
-        color: map-get($colors, "accent_3");
-        font-size: 4rem;
-        text-align: left;
-       
-        @include for-big-desktop-up{
+        h1 {
+          font-weight: 400;
+          color: map-get($colors, "accent_3");
+          font-size: 4rem;
+          text-align: left;
+
+          @include for-big-desktop-up {
             font-size: 6rem;
-        }
-        span{
+          }
+          span {
             font-size: 16px;
             display: block;
-            color: map-get($colors, primary);
+            color: map-get($colors, accent_2);
             font-weight: 400;
             text-align: left;
-            
+          }
         }
-    }
-
-   
-}
-        p{
-            font-family: 'lato';
-            color: #3B3B3B;
-            font-size: 16px;
-            line-height: 160%;
-            width: 100%;
-            padding-bottom: 10px;
-
-            @include for-desktop-up{
-                line-height: 200%;
-                font-size: 18px;
-                
-
-            }
-        }
-       
-        .button_container{
-         @include for-desktop-up{
-             padding-top: 2rem;
-         }
-         display: flex;
-             justify-content: center;
-             align-items: center;
-             margin-left: auto;
-             margin-right: auto;
-             cursor: pointer;
-             position: relative;
-             transition: 0.2s ease-in-out;
-             
-         .button{
-             background-color: map-get($colors, accent);
-           
-            transition: box-shadow 0.4s linear;
-            margin: 0.2em; /* Increased margin since the box-shado expands outside the element, like outline */
-             padding: 15px 10px 15px 10px;
-             text-align: center;
-             width: 40%;
-             
-             
-            
-             @include for-desktop-up{
-                 width: 100%;
-                 padding: 10px 30px 10px 30px ;
-             }
-             
-             a{
-                 font-size: 12px;
-                 text-decoration: none;
-                 color: map-get($colors, primary);
-                 font-weight: 700;
-                transition: color .4s ease-in-out;
-                 &:hover{
-                     color: #3B3B3B;
-                 }
-                 @include for-desktop-up{
-                     font-size: 16px;
-                 }
-             }
-         }
-      .lines{
-      visibility: hidden;
-     
-      .before, .after{
-     
-         background-color: map-get($colors, 'accent_3');
-         height: 2px;
-         
-         
       }
-     .before{
-         width: 10%;
-         left: 15%;
-         position: absolute;
-         top: 50%;
-         z-index: 1;
-         transform: translateY(-50);  
-     }
-     
-     .after{
-     width: 10%;
-         position: absolute;
-         top: 50%;
-         z-index: 1;
-         right: 15%;
-         transform: translateY(-50);  
-     
-     }
-     
-     
-     
-     
-        }
-        
-     
-     
-     }
-     
-     
-    
-     }
+      p {
+        font-family: "lato";
+        color: #3b3b3b;
+        font-size: 12px;
+        line-height: 160%;
+        width: 100%;
+        padding-bottom: 10px;
 
-
-
-}
-
-
-
-
-
-
-}
-
-footer{
-padding: 2rem 0 1rem 0;
-
-       
-@include for-tablet-landscape-up{
-    padding: 0;
-  background-color: map-get($colors, primary);
-  position: fixed;
-  display: flex;
-  align-items: center;
-  
-  width: 100%;
-}
-      
-       
-.icon-container{
-      
-     width: 40%;    
-    @include even_justify(center);
-    font-size: 36px;
-    align-items: center;
- 
-    
-    a{
-        text-decoration: none;
-        color: map-get($colors, accent);
-        transition: color .3s ease-in;
-        &:hover{
-            color: white;
-        }
-    i{
-        padding: 0px 40px 0 60px;
-        @include for-desktop-up{
-            font-size: 48px;
+        @include for-desktop-up {
+          line-height: 200%;
+          font-size: 16px;
         }
 
+        @include for-big-desktop-up {
+          font-size: 18px;
+        }
+      }
+
+      .button_container {
+        @include for-desktop-up {
+          padding-top: 2rem;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        position: relative;
+        transition: 0.2s ease-in-out;
+
+        .button {
+          background-color: map-get($colors, accent);
+          transition: background 0.4s ease-in;
+          transition: box-shadow 0.4s linear;
+
+          margin: 0.2em; /* Increased margin since the box-shado expands outside the element, like outline */
+          padding: 15px 10px 15px 10px;
+          text-align: center;
+          width: 40%;
+
+          &:hover {
+            box-shadow: 0 0 8px rgba(33, 33, 33, 0.2);
+            background-color: rgb(126, 166, 189);
+          }
+
+          @include for-desktop-up {
+            width: 100%;
+            padding: 10px 30px 10px 30px;
+          }
+
+          a {
+            font-size: 12px;
+            text-decoration: none;
+            color: map-get($colors, primary);
+            font-weight: 700;
+            transition: color 0.4s ease-in-out;
+            &:hover {
+              color: #3b3b3b;
+            }
+            @include for-desktop-up {
+              font-size: 16px;
+            }
+
+            @include for-big-desktop-up {
+              font-size: 18px;
+            }
+          }
+        }
+        .lines {
+          visibility: hidden;
+
+          .before,
+          .after {
+            background-color: map-get($colors, "accent_3");
+            height: 2px;
+          }
+          .before {
+            width: 10%;
+            left: 15%;
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+            transform: translateY(-50);
+          }
+
+          .after {
+            width: 10%;
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+            right: 15%;
+            transform: translateY(-50);
+          }
+        }
+      }
     }
+  }
 }
-
-
-}
-      
-    
-        .text{
-            text-align: center;
-         justify-content: space-between;
-            
-            display: flex;
-            padding: 0 15px 0 15px;
-            align-items: flex-end;
-         
-            @include for-tablet-landscape-up{
-              
-                padding: 2rem;
-             
-           
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                flex-grow: 1;
-            }
-
-            
-         
-            p{
-                text-align: center;
-                color: #c9c9c9;
-                font-weight: 400;
-                
-                
-            }
-            .tagline{
-                color: map-get($colors, secondary);
-               visibility: hidden;
-                text-align: center;
-                      @include for-tablet-landscape-up{
-                          visibility: visible;
-                      }
-   
-            }
-           
-           
-        }
-      
-        
-       
-    }
-

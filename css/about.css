@@ -3,16 +3,82 @@ FONTS
 */
 @import url("https://fonts.googleapis.com/css?family=Lato|Old+Standard+TT:400,700");
 body footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  font-size: 12px;
   background-color: #292929;
   color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+@media (min-width: 1200px) {
+  body footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  body footer .icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body footer .icon-container a {
+  color: #84A9BF;
+  font-size: 24px;
+  text-decoration: none;
+  -webkit-transition: 0.3s color ease-in;
+  transition: 0.3s color ease-in;
+}
+
+body footer .icon-container a:hover {
+  color: white;
+}
+
+body footer .icon-container a i {
+  padding-right: 10px;
+}
+
+@media (min-width: 1200px) {
+  body footer .icon-container a i {
+    font-size: 36px;
+  }
+}
+
+body footer .text {
+  padding-top: 15px;
+  color: #CCB08D;
+}
+
+@media (min-width: 1200px) {
+  body footer .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+body footer .text p {
+  padding-right: 25px;
+  padding-left: 15px;
 }
 
 /*** 
@@ -249,7 +315,7 @@ body .desktop-menu a:hover::after {
 MAIN CONTENT 
 ****/
 main {
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 main .landing {
