@@ -472,7 +472,12 @@ main .content .statement .date {
   text-align: left;
   padding: 0;
   position: relative;
-  top: 30px;
+}
+
+@media (min-width: 1200px) {
+  main .content .statement .date {
+    top: 30px;
+  }
 }
 
 main .content .statement .title {
