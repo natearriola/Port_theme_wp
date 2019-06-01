@@ -5,13 +5,14 @@ FONTS
 /*** 
 VAR
 */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Old Standard tt';
+  font-family: "Old Standard tt";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #CCB08D;
+  background-color: #292929;
   height: 100%;
   width: 100%;
   font-size: 12px;
@@ -25,12 +26,12 @@ body header {
   display: block;
   height: 40px;
   padding: 1rem;
-  width: 100%;
   left: 0;
   background-color: #292929;
   top: 0;
   right: 0;
   position: fixed;
+  border-bottom: 1px solid #CCB08D;
 }
 
 body nav {
@@ -41,8 +42,8 @@ body nav {
 body nav a {
   text-decoration: none;
   color: #022840;
-  -webkit-transition: color .3 ease;
-  transition: color .3 ease;
+  -webkit-transition: color 0.3 ease;
+  transition: color 0.3 ease;
 }
 
 body nav a:hover {
@@ -152,7 +153,7 @@ body nav .menu {
 
 body nav .menu li {
   padding: 10px 0;
-  font-family: 'lato';
+  font-family: "lato";
   font-size: 1.8rem;
 }
 
@@ -183,7 +184,7 @@ body .desktop-menu {
 
 @media (min-width: 1200px) {
   body .desktop-menu {
-    font-family: 'lato';
+    font-family: "lato";
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -221,19 +222,49 @@ body .desktop-menu a::after {
   width: 0;
   height: 2px;
   background: #fff;
-  -webkit-transition: width .3s;
-  transition: width .3s;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
 }
 
 body .desktop-menu a:hover::after {
   width: 100%;
-  -webkit-transition: width .3s;
-  transition: width .3s;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
 }
 
 /************
 MAIN 
 *****/
+main {
+  margin-top: 60px;
+}
+
+main .work-title {
+  margin-top: 100px;
+  background-color: #84A9BF;
+  width: 55%;
+  height: 40px;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  main .work-title {
+    width: 200px;
+  }
+}
+
+main .work-title::before {
+  content: "WORK";
+  position: absolute;
+  width: 0;
+  left: 20px;
+  top: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 48px;
+  color: white;
+}
+
 main .grid {
   display: -ms-grid;
   display: grid;
@@ -241,6 +272,7 @@ main .grid {
       grid-template-columns: repeat(autofill, minmax(120px, 1fr));
   margin: 1em auto;
   grid-auto-flow: dense;
+  margin-top: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -252,9 +284,15 @@ main .grid {
   max-width: 1500px;
 }
 
+@media (min-width: 600px) {
+  main .grid {
+    padding: 150px;
+    padding-top: 0;
+  }
+}
+
 @media (min-width: 900px) {
   main .grid {
-    padding: 50px;
     max-width: 1200px;
     padding-bottom: 150px;
   }
@@ -284,6 +322,7 @@ footer {
   right: 0;
   width: 100%;
   background-color: #292929;
+  border-top: 1px solid #CCB08D;
 }
 
 footer .icon-container {
@@ -304,8 +343,8 @@ footer .icon-container {
 footer .icon-container a {
   text-decoration: none;
   color: #84A9BF;
-  -webkit-transition: color .3s ease-in;
-  transition: color .3s ease-in;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
 }
 
 footer .icon-container a:hover {
