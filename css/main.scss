@@ -135,8 +135,7 @@ Title mobile
         width: 100%;
         padding-bottom: 10px;
 
-        @include for-desktop-up {
-          line-height: 200%;
+        @include for-tablet-landscape-up {
           font-size: 18px;
         }
 
@@ -149,13 +148,10 @@ Title mobile
         @include for-desktop-up {
           padding-top: 2rem;
         }
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-left: auto;
         margin-right: auto;
         cursor: pointer;
-        position: relative;
+
         transition: 0.2s ease-in-out;
         width: 100%;
         @include for-tablet-landscape-up {
@@ -197,32 +193,6 @@ Title mobile
             @include for-big-desktop-up {
               font-size: 18px;
             }
-          }
-        }
-        .lines {
-          visibility: hidden;
-
-          .before,
-          .after {
-            background-color: map-get($colors, "accent_3");
-            height: 2px;
-          }
-          .before {
-            width: 10%;
-            left: 15%;
-            position: absolute;
-            top: 50%;
-            z-index: 1;
-            transform: translateY(-50);
-          }
-
-          .after {
-            width: 10%;
-            position: absolute;
-            top: 50%;
-            z-index: 1;
-            right: 15%;
-            transform: translateY(-50);
           }
         }
       }

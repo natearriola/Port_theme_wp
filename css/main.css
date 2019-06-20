@@ -95,6 +95,7 @@ body nav .menuToggle .two {
 }
 
 body nav .menuToggle .three {
+  height: 2px;
   width: 14px;
 }
 
@@ -461,9 +462,8 @@ main .content .statement p {
   padding-bottom: 10px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   main .content .statement p {
-    line-height: 200%;
     font-size: 18px;
   }
 }
@@ -475,19 +475,9 @@ main .content .statement p {
 }
 
 main .content .statement .button_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
-  position: relative;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   width: 100%;
@@ -556,35 +546,5 @@ main .content .statement .button_container .button a:hover {
   main .content .statement .button_container .button a {
     font-size: 18px;
   }
-}
-
-main .content .statement .button_container .lines {
-  visibility: hidden;
-}
-
-main .content .statement .button_container .lines .before,
-main .content .statement .button_container .lines .after {
-  background-color: #8C4227;
-  height: 2px;
-}
-
-main .content .statement .button_container .lines .before {
-  width: 10%;
-  left: 15%;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  -webkit-transform: translateY(-50);
-          transform: translateY(-50);
-}
-
-main .content .statement .button_container .lines .after {
-  width: 10%;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  right: 15%;
-  -webkit-transform: translateY(-50);
-          transform: translateY(-50);
 }
 /*# sourceMappingURL=main.css.map */
