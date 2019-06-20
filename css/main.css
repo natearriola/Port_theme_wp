@@ -95,7 +95,6 @@ body nav .menuToggle .two {
 }
 
 body nav .menuToggle .three {
-  height: 2px;
   width: 14px;
 }
 
@@ -155,7 +154,7 @@ body nav .menu {
 body nav .menu li {
   padding: 10px 0;
   font-family: "lato";
-  font-size: 1.8rem;
+  font-size: 16px;
 }
 
 @media (min-width: 900px) {
@@ -284,7 +283,7 @@ body footer .icon-container a i {
   padding-right: 10px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1800px) {
   body footer .icon-container a i {
     font-size: 36px;
   }
@@ -464,7 +463,7 @@ main .content .statement p {
 
 @media (min-width: 900px) {
   main .content .statement p {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
