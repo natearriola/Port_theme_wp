@@ -12,12 +12,12 @@ FONTS
 /*** 
 VAR
 */
-body header {
+header {
   z-index: 1;
 }
 
 @media (min-width: 900px) {
-  body header {
+  header {
     display: block;
     height: 40px;
     padding: 1rem;
@@ -29,30 +29,30 @@ body header {
   }
 }
 
-body nav {
+nav {
   position: fixed;
   z-index: 4;
 }
 
 @media (min-width: 900px) {
-  body nav {
+  nav {
     position: relative;
     bottom: 20px;
   }
 }
 
-body nav a {
+nav a {
   text-decoration: none;
   color: #022840;
   -webkit-transition: color 0.3 ease;
   transition: color 0.3 ease;
 }
 
-body nav a:hover {
+nav a:hover {
   color: #8C4227;
 }
 
-body nav .menuToggle {
+nav .menuToggle {
   display: block;
   position: relative;
   top: 30px;
@@ -60,7 +60,7 @@ body nav .menuToggle {
   z-index: 1;
 }
 
-body nav .menuToggle input {
+nav .menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
@@ -74,7 +74,7 @@ body nav .menuToggle input {
   /* and place it over the hamburger */
 }
 
-body nav .menuToggle span {
+nav .menuToggle span {
   display: block;
   height: 3px;
   margin-bottom: 5px;
@@ -90,49 +90,49 @@ body nav .menuToggle span {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-body nav .menuToggle .two {
+nav .menuToggle .two {
   width: 24px;
 }
 
-body nav .menuToggle .three {
+nav .menuToggle .three {
   width: 14px;
 }
 
-body nav .menuToggle span:first-child {
+nav .menuToggle span:first-child {
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
 }
 
-body nav .menuToggle span:nth-last-child(2) {
+nav .menuToggle span:nth-last-child(2) {
   -webkit-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
 }
 
-body nav .menuToggle input:checked ~ span {
+nav .menuToggle input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-4px, -1px);
           transform: rotate(45deg) translate(-4px, -1px);
   background: #292929;
 }
 
-body nav .menuToggle input:checked ~ span:nth-last-child(3) {
+nav .menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   -webkit-transform: rotate(0deg) scale(0.2, 0.2);
           transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-body nav .menuToggle input:checked ~ span:nth-last-child(2) {
+nav .menuToggle input:checked ~ span:nth-last-child(2) {
   -webkit-transform: rotate(-45deg) translate(0, -1px);
           transform: rotate(-45deg) translate(0, -1px);
   width: 33px;
 }
 
-body nav .menuToggle input:checked ~ ul {
+nav .menuToggle input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
 }
 
-body nav .menu {
+nav .menu {
   position: absolute;
   width: 300px;
   margin: -100px 0 0 -50px;
@@ -151,19 +151,19 @@ body nav .menu {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-body nav .menu li {
+nav .menu li {
   padding: 10px 0;
   font-family: "lato";
   font-size: 16px;
 }
 
 @media (min-width: 900px) {
-  body nav .menu {
+  nav .menu {
     margin: -100px 0 0 -60px;
   }
 }
 
-body .logo {
+.logo {
   display: block;
   position: absolute;
   top: 7px;
@@ -173,17 +173,17 @@ body .logo {
   font-size: 12px;
 }
 
-body .logo h1 {
+.logo h1 {
   font-weight: 400;
 }
 
-body .desktop-menu {
+.desktop-menu {
   display: none;
   cursor: pointer;
 }
 
 @media (min-width: 900px) {
-  body .desktop-menu {
+  .desktop-menu {
     font-family: "lato";
     display: -webkit-box;
     display: -ms-flexbox;
@@ -196,12 +196,12 @@ body .desktop-menu {
   }
 }
 
-body .desktop-menu a {
+.desktop-menu a {
   font-size: 18px;
 }
 
 @media (min-width: 900px) {
-  body .desktop-menu a {
+  .desktop-menu a {
     display: inline-block;
     text-decoration: none;
     color: #CCB08D;
@@ -210,13 +210,13 @@ body .desktop-menu a {
 }
 
 @media (min-width: 900px) {
-  body .desktop-menu a li {
+  .desktop-menu a li {
     list-style: none;
     display: inline-block;
   }
 }
 
-body .desktop-menu a::after {
+.desktop-menu a::after {
   content: "";
   display: block;
   width: 0;
@@ -226,13 +226,13 @@ body .desktop-menu a::after {
   transition: width 0.3s;
 }
 
-body .desktop-menu a:hover::after {
+.desktop-menu a:hover::after {
   width: 100%;
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
 
-body footer {
+footer {
   background-color: #292929;
   color: white;
   text-align: center;
@@ -241,7 +241,7 @@ body footer {
 }
 
 @media (min-width: 900px) {
-  body footer {
+  footer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -253,7 +253,7 @@ body footer {
 }
 
 @media (min-width: 900px) {
-  body footer .icon-container {
+  footer .icon-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -267,35 +267,35 @@ body footer {
   }
 }
 
-body footer .icon-container a {
+footer .icon-container a {
   color: #84A9BF;
   text-decoration: none;
   -webkit-transition: 0.3s color ease-in;
   transition: 0.3s color ease-in;
 }
 
-body footer .icon-container a:hover {
+footer .icon-container a:hover {
   color: white;
 }
 
-body footer .icon-container a i {
+footer .icon-container a i {
   font-size: 24px;
   padding-right: 10px;
 }
 
 @media (min-width: 1800px) {
-  body footer .icon-container a i {
+  footer .icon-container a i {
     font-size: 36px;
   }
 }
 
-body footer .text {
+footer .text {
   padding-top: 15px;
   color: #CCB08D;
 }
 
 @media (min-width: 900px) {
-  body footer .text {
+  footer .text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -306,7 +306,7 @@ body footer .text {
   }
 }
 
-body footer .text p {
+footer .text p {
   padding-right: 25px;
   padding-left: 15px;
 }
@@ -474,8 +474,12 @@ main .content .statement p {
 }
 
 main .content .statement .button_container {
-  margin-left: auto;
-  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -490,6 +494,9 @@ main .content .statement .button_container {
 
 @media (min-width: 900px) {
   main .content .statement .button_container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 30%;
   }
 }

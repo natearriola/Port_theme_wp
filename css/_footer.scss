@@ -1,55 +1,53 @@
-body {
-  footer {
-    background-color: map-get($colors, primary);
-    color: white;
-    text-align: center;
-    font-size: 12px;
-    padding: 15px;
+footer {
+  background-color: map-get($colors, primary);
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
 
+  @include for-tablet-landscape-up {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+  }
+  .icon-container {
     @include for-tablet-landscape-up {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
       display: flex;
+      width: 40%;
+      justify-content: space-evenly;
+      align-items: center;
     }
-    .icon-container {
-      @include for-tablet-landscape-up {
-        display: flex;
-        width: 40%;
-        justify-content: space-evenly;
-        align-items: center;
+    a {
+      color: map-get($colors, accent);
+
+      text-decoration: none;
+      transition: 0.3s color ease-in;
+
+      &:hover {
+        color: white;
       }
-      a {
-        color: map-get($colors, accent);
-
-        text-decoration: none;
-        transition: 0.3s color ease-in;
-
-        &:hover {
-          color: white;
-        }
-        i {
-          font-size: 24px;
-          padding-right: 10px;
-          @include for-big-desktop-up {
-            font-size: 36px;
-          }
+      i {
+        font-size: 24px;
+        padding-right: 10px;
+        @include for-big-desktop-up {
+          font-size: 36px;
         }
       }
     }
-    .text {
-      padding-top: 15px;
-      color: map-get($colors, secondary);
-      @include for-tablet-landscape-up {
-        display: flex;
-        width: 60%;
-        justify-content: space-between;
-      }
-      p {
-        padding-right: 25px;
-        padding-left: 15px;
-      }
+  }
+  .text {
+    padding-top: 15px;
+    color: map-get($colors, secondary);
+    @include for-tablet-landscape-up {
+      display: flex;
+      width: 60%;
+      justify-content: space-between;
+    }
+    p {
+      padding-right: 25px;
+      padding-left: 15px;
     }
   }
 }

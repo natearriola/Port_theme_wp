@@ -148,13 +148,16 @@ Title mobile
         @include for-desktop-up {
           padding-top: 2rem;
         }
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        justify-content: center;
         cursor: pointer;
 
         transition: 0.2s ease-in-out;
         width: 100%;
         @include for-tablet-landscape-up {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
           width: 30%;
         }
         .button {
