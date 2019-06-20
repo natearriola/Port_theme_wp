@@ -182,7 +182,7 @@ body .desktop-menu {
   cursor: pointer;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   body .desktop-menu {
     font-family: "lato";
     display: -webkit-box;
@@ -200,7 +200,7 @@ body .desktop-menu a {
   font-size: 18px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   body .desktop-menu a {
     display: inline-block;
     text-decoration: none;
@@ -209,7 +209,7 @@ body .desktop-menu a {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   body .desktop-menu a li {
     list-style: none;
     display: inline-block;
@@ -240,7 +240,7 @@ body footer {
   padding: 15px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   body footer {
     position: absolute;
     bottom: 0;
@@ -252,7 +252,7 @@ body footer {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   body footer .icon-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -294,7 +294,7 @@ body footer .text {
   color: #CCB08D;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   body footer .text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -346,7 +346,7 @@ Title mobile
 **/
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   main {
     display: -ms-grid;
     display: grid;
@@ -423,7 +423,7 @@ main .landing .cta {
   padding-top: 50px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   main .landing .cta {
     visibility: hidden;
   }
@@ -448,7 +448,7 @@ main .content .statement {
   height: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   main .content .statement {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -474,7 +474,7 @@ main .content .statement .date {
   position: relative;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   main .content .statement .date {
     top: 30px;
   }
@@ -485,7 +485,7 @@ main .content .statement .title {
   top: 8%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   main .content .statement .title {
     position: relative;
   }
@@ -579,7 +579,7 @@ main .content .statement .button_container .button:hover {
   background-color: #7ea6bd;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   main .content .statement .button_container .button {
     width: 100%;
     padding: 10px 30px 10px 30px;

@@ -10,7 +10,7 @@ body footer {
   padding: 15px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   body footer {
     position: absolute;
     bottom: 0;
@@ -22,7 +22,7 @@ body footer {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   body footer .icon-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -64,7 +64,7 @@ body footer .text {
   color: #CCB08D;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   body footer .text {
     display: -webkit-box;
     display: -ms-flexbox;

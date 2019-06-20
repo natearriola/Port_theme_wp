@@ -157,7 +157,7 @@ body {
   .desktop-menu {
     display: none;
     cursor: pointer;
-    @include for-desktop-up {
+    @include for-tablet-landscape-up {
       font-family: "lato";
       display: flex;
 
@@ -169,7 +169,7 @@ body {
 
     a {
       font-size: 18px;
-      @include for-desktop-up {
+      @include for-tablet-landscape-up {
         display: inline-block;
         text-decoration: none;
         color: map-get($colors, secondary);
@@ -177,7 +177,7 @@ body {
       }
 
       li {
-        @include for-desktop-up {
+        @include for-tablet-landscape-up {
           list-style: none;
 
           display: inline-block;

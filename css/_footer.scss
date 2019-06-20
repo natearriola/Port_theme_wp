@@ -6,7 +6,7 @@ body {
     font-size: 12px;
     padding: 15px;
 
-    @include for-desktop-up {
+    @include for-tablet-landscape-up {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -14,7 +14,7 @@ body {
       display: flex;
     }
     .icon-container {
-      @include for-desktop-up {
+      @include for-tablet-landscape-up {
         display: flex;
         width: 40%;
         justify-content: space-evenly;
@@ -41,7 +41,7 @@ body {
     .text {
       padding-top: 15px;
       color: map-get($colors, secondary);
-      @include for-desktop-up {
+      @include for-tablet-landscape-up {
         display: flex;
         width: 60%;
         justify-content: space-between;
