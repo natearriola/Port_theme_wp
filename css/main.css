@@ -524,7 +524,7 @@ main .content .statement p {
 
 @media (min-width: 1200px) {
   main .content .statement p {
-    line-height: 200%;
+    line-height: 160%;
     font-size: 16px;
   }
 }
