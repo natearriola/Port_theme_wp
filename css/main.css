@@ -95,7 +95,6 @@ body nav .menuToggle .two {
 }
 
 body nav .menuToggle .three {
-  height: 2px;
   width: 14px;
 }
 
@@ -270,7 +269,6 @@ body footer {
 
 body footer .icon-container a {
   color: #84A9BF;
-  font-size: 24px;
   text-decoration: none;
   -webkit-transition: 0.3s color ease-in;
   transition: 0.3s color ease-in;
@@ -281,6 +279,7 @@ body footer .icon-container a:hover {
 }
 
 body footer .icon-container a i {
+  font-size: 24px;
   padding-right: 10px;
 }
 
@@ -335,6 +334,7 @@ body {
   html,
   body {
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
 
@@ -342,6 +342,7 @@ body {
 SECTIONS
 */
 main {
+  background-color: #CCB08D;
   /*************
 Title mobile
 **/
@@ -353,36 +354,7 @@ Title mobile
     display: grid;
     -ms-grid-columns: 0.7fr 1fr;
         grid-template-columns: 0.7fr 1fr;
-    grid-auto-rows: 90vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-main .landing {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (min-width: 1200px) {
-  main .landing {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    grid-auto-rows: 100vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -390,23 +362,9 @@ main .landing {
 }
 
 main .landing img {
-  max-height: 100%;
   max-width: 100%;
-}
-
-@media (min-width: 1200px) {
-  main .landing img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-  }
+  position: relative;
+  bottom: 10px;
 }
 
 main .landing .cta {
@@ -440,31 +398,18 @@ main .landing .cta p {
 
 main .content {
   background-color: #CCB08D;
-  padding: 5rem;
-  height: 100%;
+  padding: 2rem;
+}
+
+@media (min-width: 900px) {
+  main .content {
+    padding: 4rem;
+  }
 }
 
 main .content .statement {
   text-align: left;
   height: 100%;
-}
-
-@media (min-width: 900px) {
-  main .content .statement {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 main .content .statement .date {
@@ -473,12 +418,6 @@ main .content .statement .date {
   text-align: left;
   padding: 0;
   position: relative;
-}
-
-@media (min-width: 900px) {
-  main .content .statement .date {
-    top: 30px;
-  }
 }
 
 main .content .statement .title {
@@ -495,7 +434,7 @@ main .content .statement .title {
 main .content .statement .title h1 {
   font-weight: 400;
   color: #8C4227;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: left;
 }
 
@@ -517,21 +456,21 @@ main .content .statement p {
   font-family: "lato";
   color: #3b3b3b;
   font-size: 12px;
-  line-height: 160%;
+  line-height: 200%;
   width: 100%;
   padding-bottom: 10px;
 }
 
 @media (min-width: 1200px) {
   main .content .statement p {
-    line-height: 160%;
-    font-size: 16px;
+    line-height: 200%;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1800px) {
   main .content .statement p {
-    font-size: 18px;
+    font-size: 24px;
   }
 }
 
@@ -551,11 +490,18 @@ main .content .statement .button_container {
   position: relative;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
   main .content .statement .button_container {
     padding-top: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  main .content .statement .button_container {
+    width: 30%;
   }
 }
 
